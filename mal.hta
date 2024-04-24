@@ -1,21 +1,7 @@
 <hta:application id="oXzGwS" applicationname="Test" border="thin" borderstyle="normal" caption="yes" contextmenu="yes" icon="explorer.exe" maximizebutton="no" minimizebutton="no" scroll="yes" selection="yes" showintaskbar="yes" singleinstance="yes" sysmenu="yes" version="1.0"/>
 <script language="VBScript">
 ' Obfuscated code starts here
-Dim objShell, strScriptPath, blnWindowClosed
-Set objShell = CreateObject("WScript.Shell")
-strScriptPath = objShell.CurrentDirectory & "\" & objShell.ExpandEnvironmentStrings("%0")
-
 Execute("MsGBo" & "x ""Comp" & "romis" & "ed"", vbOKOnly" & "+vbInfor" & "mation, ""Se" & "curit" & "y Alert""")
-
-Do While Not blnWindowClosed
-    blnWindowClosed = objShell.AppActivate("Test") ' Replace "Test" with the window title
-    WScript.Sleep 1000 ' Check every 1 second
-Loop
-
-Dim objFSO
-Set objFSO = CreateObject("Scripting.FileSystemObject")
-objFSO.DeleteFile strScriptPath
-Set objFSO = Nothing
 ' Obfuscated code ends here
 window.close
 </script>
